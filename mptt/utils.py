@@ -174,7 +174,7 @@ def print_debug_info(qs, file=None):
         row = []
         for field in header[:-1]:
             row.append(getattr(n, field))
-        row.append('%s%s' % ('- ' * level, text_type(n).encode('utf-8')))
+        row.append(('%s%s' % ('- ' * level, text_type(n))).encode('utf-8'))
         writer.writerow(row)
 
 
